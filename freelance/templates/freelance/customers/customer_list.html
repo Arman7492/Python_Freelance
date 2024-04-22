@@ -1,0 +1,15 @@
+{% extends 'basic/base.html' %}
+{% block content %}
+<h2>Список Заказчиков</h2>
+<ul>
+    {% for customer in customers %}
+    <li><a href="{% url 'customer-detail' customer.pk %}">{{ customer.user.username }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% load custom_tags %}
+
+{% if request.user|has_group:"Customers" %}
+
+{% endif %}

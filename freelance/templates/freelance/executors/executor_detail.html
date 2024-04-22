@@ -1,0 +1,11 @@
+<div class="executor">
+    <h1>{{ executor.user.username.title }}</h1>
+    <h1>{{ executor.user.first_name }}</h1>
+    <h1>{{ executor.user.last_name }}</h1>
+    <h2><a href="{% url 'executor-list' %}">К списку исполнителей</a></h2>
+    <p>{{ executor.phone }}</p>
+    <p>{{ executor.skills }}</p>
+    <p>{{ executor.preferences }}</p>
+    <p>{{ executor.get_service_type_display }}</p>
+    <p>{{ executor.get_order_type_display }}</p>    
+</div>
